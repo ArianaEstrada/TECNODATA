@@ -47,6 +47,8 @@
                         @endif
                     @endauth
                 </nav>
+
+                <h1>cambio de prueba</h1>
             @endif
         </header>
         <div class="flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
