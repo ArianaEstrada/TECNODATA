@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+             $table->unsignedBigInteger('id_persona')->nullable(); // La columna puede ser nullable
+            $table->foreign('id_persona')->references('id_persona')->on('personas')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
         });
