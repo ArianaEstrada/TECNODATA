@@ -11,28 +11,20 @@ class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
-    protected $fillable = [
+        protected $fillable = [
         'name',
         'email',
         'password',
+        'id_persona',
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var list<string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
+    protected $hidden = ['password', 'remember_token'];
+    protected $dates = [
+        'created_at',
+        'updated_at'
     ];
 
+   
     /**
      * Get the attributes that should be cast.
      *
@@ -45,4 +37,6 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+        public $timestamps = true; // Si no usas created_at/updated_at
+    public $incrementing = true;
 }

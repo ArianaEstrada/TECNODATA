@@ -2,19 +2,19 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
-class Rol extends Model
+use Database\Factories\RolFactory;
+class empleados extends Model
 {
-   
-    use HasFactory;
+use HasFactory;
 
-    protected $table = 'roles';
+    protected $table = 'empleados';
 
-    protected $primaryKey = 'id_rol';
+    protected $primaryKey = 'id_empleado';
 
     protected $fillable = [
-        'desc_rol',
+        'id_persona',
     ];
     public $timestamps = true; // Si no usas created_at/updated_at
     protected $dates = [
@@ -22,6 +22,4 @@ class Rol extends Model
         'updated_at'
     ];
     public $incrementing = true;
-
 }
-
