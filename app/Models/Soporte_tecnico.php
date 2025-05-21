@@ -9,7 +9,7 @@ class Soporte_tecnico extends Model
 {
 use HasFactory;
 
-    protected $table = 'soporte_tecnico';
+    protected $table = 'soporte_tecnicoS';
 
     protected $primaryKey = 'id_soporte';
 
